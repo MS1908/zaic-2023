@@ -1,0 +1,15 @@
+accelerate launch train_dreambooth.py \
+  --pretrained_model_name_or_path CompVis/stable-diffusion-v1-4 \
+  --train_text_encoder \
+  --instance_data_dir /mnt/data/minhnq54/zaic-2023-banner/train/images \
+  --output_dir /mnt/data/minhnq54/document-vision-models-and-logs/weights/zaic/dreambooth \
+  --instance_prompt="a photo of sks dog" \
+  --resolution 512 \
+  --train_batch_size 1 \
+  --gradient_checkpointing \
+  --learning_rate 2e-6 \
+  --lr_scheduler="constant" \
+  --lr_warmup_steps=0 \
+  --num_class_images=200 \
+  --num_train_epochs 10 \
+  --push_to_hub

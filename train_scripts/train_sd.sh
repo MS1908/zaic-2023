@@ -11,5 +11,5 @@ accelerate launch --mixed_precision="fp16" train_text_to_image.py --input_pertur
                                --train_batch_size 2 \
                                --snr_gamma 5.0 \
                                --dataloader_num_workers 4 \
-                               --output_dir /mnt/data/minhnq54/document-vision-models-and-logs/weights/zaic \
+                               --output_dir /mnt/data/minhnq54/document-vision-models-and-logs/weights/zaic/sd \
                                --checkpoints_total_limit 1
